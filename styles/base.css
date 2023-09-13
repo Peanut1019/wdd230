@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Acme');
+header {
+    align-items: center;
+}
+header img {
+    height: 300px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav {
+    text-align: center;
+    background-color: #c9e3dc;
+}
+nav a{
+    text-decoration: none;
+    color: #0d776e;
+    padding: 30px;
+}
+nav a:hover{
+text-decoration: underline;
+color: #c75b12;
+}
+h1{
+    color: #0d776e;
+    text-align: center;
+    font-family: "Acme";
+    font-size: 45px;
+}
+h2 {
+    color: #1d5c42;
+    text-align: center;
+}
+main {
+    width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    grid-gap: 15px;
+    font-family: "Courgette";
+}
+main h2 {
+    grid-column: 2/3; 
+}
+.card {
+    background-color: #eed6a5;
+    text-align: center;
+    height: 200px;
+    color: #23423a;
+    grid-column: 2/3;
+}
+.card ul {
+    text-align: center;
+    list-style-type: none;
+
+}
+footer {
+    text-align: center; 
+    font-family: "Acme";
+    color: #c75b12; 
+}
