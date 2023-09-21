@@ -14,9 +14,9 @@ header {
 header img {
     height: 250px;
     width: auto;
-    display: block;
+    /* display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
 }
 nav {
     text-align: center;
@@ -62,15 +62,22 @@ main h2 {
 .card {
     background-color: #eed6a5;
     text-align: center;
-    height: 200px;
+    height: auto;
     color: #23423a;
     grid-column: 1/3;
     width: 350px;
 }
-.card ul {
+.card ol,ul {
     text-align: center;
     list-style-type: none;
-
+    color: #0d776e;
+}
+.card a {
+    text-decoration: none;
+    color: #0d776e;
+}
+.card a:hover {
+    color: #623c1b;
 }
 footer {
     text-align: center; 
