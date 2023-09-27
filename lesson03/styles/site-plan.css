@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Acme');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+    justify-content: center;
+}
+img {
+    width: 450px;
+}
+.top {
+    background-color: #0f0326;
+    text-align: center;
+}
+.top h2 {
+    font-family: 'Courgette';
+    color: #5e9cae;
+    font-size: 35px;
+}
+.top p {
+    font-family: "Acme";
+    color: #5e9cae;
+}
+.misc {
+    background-color: #e37222;
+    text-align: left; 
+}
+.misc h3,h4 {
+    font-family: 'Courgette';
+    color: #fbffb9;
+}
+.misc p {
+    font-family: "Acme";
+    color: #0f0326; 
+}
+.misc a {
+    text-decoration: none;
+    color: #0f0326;
+    font-family: "Acme";
+}
+.misc a:hover {
+    color: #14453d;
+    text-decoration: underline;
+}
