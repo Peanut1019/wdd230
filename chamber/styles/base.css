@@ -6,31 +6,45 @@
 }
 body {
     justify-content: center;
+    align-items: center;
     display: grid;
-     height: 100vh;
+    height: 100vh;
     margin: 0 auto;
+    background-color: aliceblue;
 }
 p, li {
     font-family: "Acme";
 }
+#mode {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	font-size: 3rem;
+	cursor: pointer;
+    color: #5e9cae;
+}
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 55px 1fr 1fr;
     max-width: 800px;
+    justify-items: center;
     background-color: #14453d;
     color: #fbffb9;
-    font-size: 25px;
+    font-size: 15px;
     font-family: "Courgette";
 }
+header h1 {
+    grid-column: 2/3;
+
+}
 header img {
-    height: 250px;
-    min-width: 350px;
+    height: 110px;
     border:1px dashed #0f0326;
+    grid-column: 3/4;
 }
 nav {
     text-align: center;
-    background-color: #0f0326;
+    background-color: #fbffb9;
     margin: 0 auto;
 	max-width: 800px;
 }
@@ -39,7 +53,7 @@ nav ul {
 }
 nav a{
     text-decoration: none;
-    color: #5e9cae;
+    color: #0f0326;
     padding: 10px;
     display: block;
     font-family: "Courgette";
@@ -55,7 +69,7 @@ color: #c75b12;
 	font-size: 1.5rem;
 	border: 1px solid rgba(0,0,0,.3);
 	padding: 3px 7px 6px;
-	background-color: #eee;
+	background-color: aliceblue;
 	color: #000;
  	position: absolute;
 	top: 1rem;
@@ -100,8 +114,15 @@ main h2 {
 	margin: 15px;
     width: 350px;
 }
-.hero p {
+.hero a {
+    text-decoration: none;
+    background-color: #fbffb9;
+    color: #0f0326;
+}
+.hero a:hover {
     text-decoration: underline;
+    background-color: #0f0326;
+    color: #fbffb9;
 }
 .events {
     background-color: #5e9cae;
@@ -125,10 +146,10 @@ main h2 {
     width: 350px;
 }
 .spotlights {
-    background-color: #fbffb9;
+    background-color: #0f0326;
     text-align: center;
     height: auto;
-    color: #0f0326;
+    color: #5e9cae;
     grid-column: 1/3;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -138,20 +159,53 @@ main h2 {
 .spotlights h2 {
     grid-column: 1/4;
 }
+.spotlights ul {
+    list-style-type: none;
+}
 .fun {
     grid-column: 1/4;
-    height: 200px;
-    border:1px solid#14453d;
+    height: 150px;
+    border:1px dashed #14453d;
+}
+.fun a {
+    text-decoration: none;
+    background-color: #0f0326;
+    color: #5e9cae;
+}
+.fun a:hover {
+    text-decoration: underline;
+    background-color: #5e9cae;
+    color: #0f0326;
 }
 .food {
     grid-column: 1/4;
-    height: 200px;
-    border:1px solid#14453d;
+    height: 150px;
+    border:1px dashed#14453d;
+}
+.food a {
+    text-decoration: none;
+    background-color: #0f0326;
+    color: #5e9cae;
+}
+.food a:hover {
+    text-decoration: underline;
+    background-color: #5e9cae;
+    color: #0f0326;
 }
 .favs {
     grid-column: 1/4;
-    height: 200px;
-    border:1px solid#14453d;
+    height: 150px;
+    border:1px dashed#14453d;
+}
+.favs a {
+    text-decoration: none;
+    background-color: #0f0326;
+    color: #5e9cae;
+}
+.favs a:hover {
+    text-decoration: underline;
+    background-color: #5e9cae;
+    color: #0f0326;
 }
 footer {
     text-align: center; 

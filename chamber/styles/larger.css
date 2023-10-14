@@ -3,18 +3,20 @@
         display: grid;
         height: 100vh;
         margin: 0 auto;
+        width: 100%;
+        justify-items: center;
     }
     header {
-        padding: 1rem;
-        display: flex;
+        width: 100%;
     }
-    h1 {
+    /* h1 {
         position: relative;
         left: 50px;
         top: 50px;
-    }
+    } */
     main {
         justify-items: center;
+        width: fit-content;
     }
     nav ul {
         display: flex;
@@ -25,6 +27,7 @@
     }
     .hero {
         grid-column: 1/2;
+        grid-row: 1/3;
     }
     .events {
         grid-column: 2/3;
