@@ -114,6 +114,11 @@ main h2 {
 	margin: 15px;
     width: 350px;
 }
+.hero img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 .hero a {
     text-decoration: none;
     background-color: #fbffb9;

@@ -24,7 +24,7 @@
             ☾
         </div>
         <h1>Saratoga Springs Chamber of Commerce</h1>
-        <img class= "img" src="images/saralogo.png" alt= "A Logo">
+        <img class= "img" src="images/saralogo.webp" alt= "A Logo">
     </header>
     
     <nav>
@@ -38,7 +38,11 @@
     </nav>
     <main>
         <section class="hero">
-            <img src="images/sarapics.png" alt="Hero Image">
+            <picture>
+                <source srcset="images/web-small.webp" media="(max-width: 500px)">
+                <source srcset="images/web-medium.webp" media="(max-width: 850px)">
+                <img src="images/web-large.webp" alt="Pic" width="1200" height="800">
+            </picture>
             <a href="#">Join Us</a>
         </section>
         <section class="events">
