@@ -212,6 +212,19 @@ main h2 {
     background-color: #5e9cae;
     color: #0f0326;
 }
+.sidebar {
+    background-color: #5e9cae;
+    color: #0f0326;
+    width: 391px;
+    text-align: center;
+}
+.ad1 {
+    background-color: #fbffb9;
+    color: #c75b12;
+    height: 200px;
+    width: 391px;
+    text-align: center;
+}
 footer {
     text-align: center; 
     font-family: "Acme";
