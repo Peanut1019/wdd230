@@ -45,3 +45,25 @@ modeButton.addEventListener("click", () => {
 		modeButton.textContent = "☾";
 	}
 });
+const visitsDisplay = document.querySelector(".visits");
+const theDateToday = new Date();
+const today = Date.now();
+let numbVisits = Number(window.localStorage.getItem("numVisits-ls")) || 0;
+let daysleft = Number(window.localStorage.getItem("numDays-ls")) || 0;
+daysleft = (theDateToday.getTime() - Date.now()) / msToDays;
+if (numbVisits !== 0) {
+	if (daysleft == 1){
+		visitsDisplay.textContent = 'Back so soon! Awesome!';
+	}
+	else{
+		visitsDisplay.textContent = 'You last visited ago.'
+	}
+} 
+else {
+	visitsDisplay.textContent = `Welcome! Let us know if you have any questions.`;
+}
+
+numbVisits++;
+
+localStorage.setItem("numDays-ls", daysleft);
+daysElement.textContent = `${daysleft.toFixed(0)} days`;
