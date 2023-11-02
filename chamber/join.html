@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jess Nelson">
+    <meta
+      name="description"
+      content="A web page wherein the area of Saratoga Springs' chamber of commerce site is exemplified.">
+      <meta property="og:title" content="Jess Nelson - WDD 230 - Chamber of Commerce">
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://gardner.utah.edu/wp-content/uploads/lehi-utah-e1496158223898.jpg?x71849">
+    <meta property="og:url" content="https://peanut1019.github.io/wdd230/index.htm">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link href="styles/base.css" rel="stylesheet">
+    <link href="styles/medium.css" rel="stylesheet">
+    <link href="styles/larger.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <title>Chamber of Commerce Site</title>
+</head>
+<body>
+    <header>
+        <div id="mode">
+            ☾
+        </div>
+        <h1>Saratoga Springs Chamber of Commerce</h1>
+        <img class= "img" src="images/saralogo.webp" alt= "A Logo">
+    </header>
+    
+    <nav>
+        <button id="menu"></button>
+        <ul class="navigation">
+        <li ><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="#">Directory</a></li>
+        <li><a href="join.html" class="active">Join</a></li>
+    </ul>
+    </nav>
+    <main>
+        <form method="get" action="thanks.html">
+            <label id="time"><input type="hidden" name="time" required></label>
+            <fieldset class="personal">
+            <legend>Personal Information</legend>
+            <label id="fname">First Name*<input type="text" name="fname" required></label>
+            <label id="lname">Last Name*<input type="text" name="lname" required></label>
+            <label id="email">Email*<input type="email" name="email" placeholder="email@cool.com" required></label>
+            <label id="phone">Phone Number*<input type="tel" name="lname" required></label>
+          </fieldset> 
+          <fieldset class="business">
+            <legend>Business Information</legend>
+            <label id="title">Title or Position*<input type="text" name="title" required></label>
+            <label id="bname">Buisness Name*<input type="text" name="bname" pattern="[A-Za-z-]{>7}" required></label>
+            <label id="description">Description*<input type="text" name="description" required></label>
+          </fieldset> 
+          <fieldset class="membership">
+            <legend>Membership Level</legend>
+            <label id="np"><input type="radio" name="membership" value="np">NP Membership</label><br>
+            <label id="bronze"><input type="radio" name="membership" value="bronze">Bronze Membership</label><br>
+            <label id="silver"><input type="radio" name="membership" value="silver">Silver Membership</label><br>
+            <label id="gold"><input type="radio" name="membership" value="gold">Gold Membership</label>
+          </fieldset>
+          <input type="submit" value="Sign Me Up!" class="submitBtn">
+        </form>
+        <table>
+            <caption>Table 1: Membership Benefits Comparison</caption>
+            <thead>
+                <tr>
+                    <th colspan="5" scope="colgroup">Membership Benefits</th>
+                </tr>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Special events</th>
+                    <th scope="col">Training</th>
+                    <th scope="col">Spotlight</th>
+                    <th scope="col">Event Discounts</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>NP Membership $0</th>
+                    <td>☑️</td>
+                    <td>✖️</td>
+                    <td>✖️</td>
+                    <td>☑️</td>
+                </tr>
+                <tr>
+                    <th>Bronze Membership $15</th>
+                    <td>✖️</td>
+                    <td>☑️</td>
+                    <td>✖️</td>
+                    <td>☑️</td>
+                </tr>
+                <tr>
+                    <th>Silver Membership $20</th>
+                    <td>☑️</td>
+                    <td>☑️</td>
+                    <td>✖️</td>
+                    <td>☑️</td>
+                </tr>
+                <tr>
+                    <th>Gold Membership $25</th>
+                    <td>☑️</td>
+                    <td>☑️</td>
+                    <td>☑️</td>
+                    <td>☑️</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> - Jessica Nelson - USA</p>
+        <p id="lastModified"></p>
+        <h3>Contact Us:</h3>
+        <p>📞: 385-___-____</p>
+        <p>📧: random123@email.com</p>
+        <p>🏢: 123 N Random Ave. Saratoga Springs, UT 84005</p>
+    </footer>
+    <script src="scritps/chamber.js"></script>
+</body>
+</html>

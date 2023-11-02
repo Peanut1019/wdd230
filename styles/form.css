@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Acme');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+    justify-content: center;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    background-color: #1d5c42;
+}
+header img {
+    height: 250px;
+    min-width: 350px;
+    /* position: absolute;
+	top: 1rem;
+	left: 1rem */
+}
+nav {
+    text-align: center;
+    background-color: #c9e3dc;
+    margin: 0 auto;
+	max-width: 800px;
+}
+nav ul {
+	list-style-type: none;
+}
+nav a{
+    text-decoration: none;
+    color: #23423a;
+    padding: 10px;
+    display: block;
+}
+nav a:hover{
+text-decoration: underline;
+color: #c75b12;
+}
+.navigation li {
+	display: none;
+}
+#menu {
+	font-size: 1.5rem;
+	border: 1px solid rgba(0,0,0,.3);
+	padding: 3px 7px 6px;
+	background-color: #eee;
+	color: #000;
+ 	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "✖️";
+}
+.open li {
+	display: block;
+	width: 100%;
+}
+.open li a {
+	display: block;
+}
+.active::before {
+	content: "👁️‍🗨️"; 
+}
+h1{
+    color: #c9e3dc;
+    text-align: center;
+    font-family: "Acme";
+    font-size: 45px;
+}
+h2 {
+    color: #1d5c42;
+    text-align: center;
+}
+main {
+    width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    grid-gap: 15px;
+    font-family: "Courgette";
+}
+form label#user, #password, #password1, #email, #rate {
+    display: block;
+    padding-top: 1rem;
+    color: #c75b12;
+    font-size: .9rem;
+    }
+form label#user input, #password input, #password1 input, #email input, form label#user select {
+        display: block;
+        font-size: 1rem;
+        border: solid 1px #1d5c42;
+        border-radius: 4px;
+        padding: .75rem;
+        color: #623c1b;
+        width: 100%;
+        max-width: 20rem;
+        background-color: #eed6a5;
+        }
+        #r {
+            width: 180px;
+            margin-bottom: 0;
+        }
+        
+        #rangevalue {
+            font-size: 2rem;
+            color: #23423a;
+        }
+        
+        #rangevalues {
+            display: flex;
+            margin: 0 0 0 15px;
+            width: 200px;
+            color: #23423a;
+        }
+        
+        #rangevalues option {
+            flex: 1 1 auto;
+        }
+form label#user input:required, #password input:required, #password1 input:required, #email input:required {
+            border-left: orangered solid 6px;
+         }
+form label#user input:required:valid, #password input:required:valid, #password1 input:required:valid, #email input:required:valid {
+             border-left: greenyellow solid 6px;
+         }
+form input.submitBtn {
+            border: none;
+            background-color: #c75b12;
+            color: #eed6a5;
+            border-radius: 1rem;
+            padding: .75rem 1.5rem;
+            margin: 0 0 2rem 2%;
+            width:96%;
+            max-width: 20rem;
+        }
+footer {
+    text-align: center; 
+    font-family: "Acme";
+    color: #623c1b; 
+}
