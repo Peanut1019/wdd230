@@ -1,0 +1,28 @@
+{
+    "familyName" : "Yellow",
+    "movedIn" : 2014,
+    "numMembers" : 4,
+    "visited" : true,
+    "members" : [
+      {
+        "name" : "Gerald Price",
+        "gender" : "M",
+        "birthdate" : "March 5th, 1986"
+      },
+      {
+        "name" : "Jamie Furth",
+        "gender" : "F",
+        "birthdate" : "Febuary 15th, 1986"
+      },
+      {
+        "name" : "Maddox Price",
+        "gender" : "M",
+        "birthdate" : "June 27th, 2006"
+      },
+      {
+        "name" : "Madline Reese",
+        "gender" : "F",
+        "birthdate" : "October 14th, 2010"
+      }
+    ]
+  }
