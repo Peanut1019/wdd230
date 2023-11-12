@@ -1,5 +1,7 @@
-let currentYear = document.querySelector('#year')
+let currentYear = document.querySelector('#year');
+
 document.querySelector('#year').textContent = 2023;
+
 let oLastModif = document.querySelector('#lastModified')
 document.querySelector('#lastModified').textContent = new Date(document.lastModified).toDateString();
 
@@ -81,3 +83,62 @@ function getLastVisit() {
 	}
 	let lastOpend =  document.querySelector('#time')
 	document.querySelector('#time').textContent = new Date().toDateString();
+
+	const gridbutton = document.querySelector("#grid");
+	const listbutton = document.querySelector("#list");
+	const display = document.querySelector("article");
+	
+	// The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
+	
+	gridbutton.addEventListener("click", () => {
+		// example using arrow function
+		display.classList.add("grid");
+		display.classList.remove("list");
+	});
+	
+	listbutton.addEventListener("click", showList); // example using defined function
+	
+	function showList() {
+		display.classList.add("list");
+		display.classList.remove("grid");
+	}
+
+const baseURL = "https://Peanut1019.github.io/wdd230/";
+const linksURL = "https://Peanut1019.github.io/wdd230/chamber/data/members.json";
+const disc = document.querySelector('#disc');
+async function getLinks() {
+    const response = await fetch(linksURL);
+    const data = await response.json();
+    const displayLinks = (members) => {
+    members.forEach(member => {
+    	let card = document.createElement('section');
+    	let name = document.createElement('h2');
+    	let image = document.createElement('img');
+    	let address = document.createElement('h3');
+    	let phone = document.createElement('h3');
+		let url = document.createElement('a');
+		let membership = document.createElement('h3');
+     
+     name.textContent = ('Name: ${member.name}', member.name);
+     address.textContent = ('Address: ${member.address}', member.address);
+     phone.textContent = ('Phone #: ${member.phone}', member.phone);
+	 url.setAttribute('href', member.url);
+     image.setAttribute('src', member.imageurl);
+     image.setAttribute('alt', 'Protrait of ${member.name}');
+     image.setAttribute('loading', 'lazy');
+     image.setAttribute('width', '340');
+     image.setAttribute('height', '440');
+	 membership.textContent = ('Membership: ${member.membership}', member.membership);
+
+     card.appendChild(name);
+     card.appendChild(image);
+     card.appendChild(address);
+     card.appendChild(phone);
+	 card.appendChild(url);
+	 card.appendChild(membership);
+     disc.appendChild(card);
+        });
+    };
+    displayLinks(data.members);
+}
+getLinks();

@@ -138,6 +138,9 @@ main h2 {
     list-style-type: none;
     color: #23423a;
 }
+.card ol>li>div {
+    display:inline-flex;
+}
 .card a {
     text-decoration: none;
     color: #23423a;

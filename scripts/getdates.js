@@ -32,9 +32,9 @@ localStorage.setItem("numVisits-ls", numbVisits);
 const kp1 = document.querySelector("#password");
 const kp2 = document.querySelector("#password1");
 const message = document.querySelector("#formmessage");
-
+if (kp2 !== null) {
 kp2.addEventListener("focusout", checkSame);
-
+}
 // This should be refactored.
 function checkSame() {
 	if (kp1.value !== kp2.value) {
@@ -53,9 +53,10 @@ const rangevalue = document.getElementById("rangevalue");
 const range = document.getElementById("r");
 
 // RANGE event listener
+if (range !== null) {
 range.addEventListener('change', displayRatingValue);
 range.addEventListener('input', displayRatingValue);
-
+}
 function displayRatingValue() {
     rangevalue.innerHTML = range.value;
 }
