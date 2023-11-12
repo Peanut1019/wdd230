@@ -113,8 +113,8 @@ async function getLinks() {
     const displayLinks = (members) => {
     members.forEach(member => {
     	let card = document.createElement('section');
-    	let name = document.createElement('h2');
     	let image = document.createElement('img');
+		let name = document.createElement('h2');
     	let address = document.createElement('h3');
     	let phone = document.createElement('h3');
 		let url = document.createElement('a');
@@ -123,23 +123,27 @@ async function getLinks() {
      name.textContent = ('Name: ${member.name}', member.name);
      address.textContent = ('Address: ${member.address}', member.address);
      phone.textContent = ('Phone #: ${member.phone}', member.phone);
-	 url.setAttribute('href', member.url);
+		let linkAnchor = document.createElement('a');
+		linkAnchor.setAttribute('href',member.url);
+		linkAnchor.setAttribute('target','_blank');
+		linkAnchor.textContent = (`${member.name}'s website`);
+		url.appendChild(linkAnchor);
      image.setAttribute('src', member.imgurl);
      image.setAttribute('alt', 'Protrait of ${member.name}', member.name);
      image.setAttribute('loading', 'lazy');
      image.setAttribute('width', '340');
      image.setAttribute('height', '440');
 	 membership.textContent = ('Membership: ${member.membership}', member.membership);
-
+	 
+	 card.appendChild(image);
      card.appendChild(name);
-     card.appendChild(image);
      card.appendChild(address);
      card.appendChild(phone);
 	 card.appendChild(url);
 	 card.appendChild(membership);
      disc.appendChild(card);
         });
-    };
+    }
     displayLinks(data.members);
 }
 getLinks();

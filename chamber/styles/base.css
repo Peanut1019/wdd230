@@ -355,7 +355,7 @@ tbody tr:nth-child(odd) {
 	margin: 1rem auto;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 0.5rem;
-	background-color: #bed;
+	background-color: var(--back2);
 	text-align: center;
     grid-column: 1/3;
 }
@@ -382,12 +382,15 @@ section {
 .grid section {
 	text-align: center;
     width: 400px;
-    height: auto;
+    height: 400px;
+    color: var(--back);
 }
 
 .grid img {
 	border: 1px solid #fff;
-    height:250px;
+    max-width: 200px;
+    max-height: 175px;
+    height: auto;
     width: auto;
 	box-shadow: 0 0 10px #333;
 }
@@ -399,12 +402,19 @@ section {
 .grid h3 {
 	font-family: "Caveat", cursive;
 }
-
+.grid a {
+    text-decoration: none;
+    color: var(--foredark);
+}
+.grid a:hover {
+    color: var(--back2);
+    text-decoration: underline;
+}
 .list {
-	display: flex;
+	display: inline-flex;
 	flex-direction: column;
     grid-column: 1/3;
-    width: 400px;
+    width: 450px;
 }
 
 .list section {
@@ -412,6 +422,7 @@ section {
 	grid-template-columns: 2fr 1fr 1fr;
 	margin: 0;
 	padding: 0.25rem;
+    color: var(--back);
 }
 
 .list section > * {
@@ -424,11 +435,18 @@ section {
 
 .list section h3 {
 	font-size: 1rem;
-	font-family: Roboto, Helvetica, sans-serif;
+	font-family: "Acme", sans-serif;
 }
-
+.list section a {
+    text-decoration: none;
+    color: var(--foredark);
+}
+.list section a:hover {
+    text-decoration: underline;
+    color: var(--back2);
+}
 .list section:nth-child(even) {
-	background-color: #bed;
+	background-color: var(--forelight);
 }
 
 section h3 {

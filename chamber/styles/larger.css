@@ -65,4 +65,13 @@
     .sidebar img:hover {
         box-shadow: 0 0 50px #333;
     }
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .grid section {
+        width: 250px;
+    }
+   .list {
+    width: 750px;
+   }
  }
