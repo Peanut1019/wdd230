@@ -2,60 +2,60 @@
 {
     "members": [
         {
-            "name": "01",
-            "address": "blah",
-            "phone": 3421,
-            "url": "blank",
+            "name": "Leavalay Levelers",
+            "address": "2346 Leafy Lane Saratoga Springs, UT",
+            "phone": "541-346-7768",
+            "url": "https://leavalay.com",
             "imgurl": "images/27.webp",
             "membership": "NP"
         },
         {
-            "name": "01",
-            "address": "blah",
-            "phone": 3421,
-            "url": "blank",
-            "imgurl": "images/27.webp",
-            "membership": "NP"
+            "name": "Mountaineer Mixers",
+            "address": "1000 Feet Frk Saratoga Springs, UT",
+            "phone": "456-983-3421",
+            "url": "https://mountaineermix.com",
+            "imgurl": "images/35.webp",
+            "membership": "Bronze"
         },
         {
-            "name": "01",
-            "address": "blah",
-            "phone": 3421,
-            "url": "blank",
-            "imgurl": "images/27.webp",
-            "membership": "NP"
+            "name": "Valley Voyages",
+            "address": "5576 Valley Blv Saratoga Springs, UT",
+            "phone": "456-963-3421",
+            "url": "https://valleyvoyages.com",
+            "imgurl": "images/IMG_0526.webp",
+            "membership": "Bronze"
         },
         {
-            "name": "01",
-            "address": "blah",
-            "phone": 3421,
-            "url": "blank",
-            "imgurl": "images/27.webp",
-            "membership": "NP"
+            "name": "Plumpie's Pumpkin Patch",
+            "address": "300 Pumpkin Lane Saratoga Springs, UT",
+            "phone": "541-345-6234",
+            "url": "https://pumpkinplum.com",
+            "imgurl": "images/IMG_0634.webp",
+            "membership": "Silver"
         },
         {
-            "name": "01",
-            "address": "blah",
-            "phone": 3421,
-            "url": "blank",
-            "imgurl": "images/27.webp",
-            "membership": "NP"
+            "name": "Green's Golf Club",
+            "address": "6758 Green's Way Saratoga Springs, UT",
+            "phone": "541-324-5647",
+            "url": "https://greensgolf.com",
+            "imgurl": "images/hill.webp",
+            "membership": "Silver"
         },
         {
-            "name": "01",
-            "address": "blah",
-            "phone": 3421,
-            "url": "blank",
-            "imgurl": "images/27.webp",
-            "membership": "NP"
+            "name": "Poppy's Pans and Pics",
+            "address": "7563 Main St Saratoga Springs, UT",
+            "phone": "456-983-3471",
+            "url": "https://poppyspanandpics.com",
+            "imgurl": "images/lehi-utah.webp",
+            "membership": "Gold"
         },
         {
-            "name": "01",
-            "address": "blah",
-            "phone": 3421,
-            "url": "blank",
-            "imgurl": "images/27.webp",
-            "membership": "NP"
+            "name": "Hunter's Hikes",
+            "address": "7486 Hilltop Rd Saratoga Springs, UT",
+            "phone": "456-973-3481",
+            "url": "https://hikeshunter.com",
+            "imgurl": "images/mountain.webp",
+            "membership": "Gold"
         }
     ]
 }

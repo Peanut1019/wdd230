@@ -1,7 +1,7 @@
 let currentYear = document.querySelector('#year');
-
+if (currentYear !== null) {
 document.querySelector('#year').textContent = 2023;
-
+}
 let oLastModif = document.querySelector('#lastModified')
 document.querySelector('#lastModified').textContent = new Date(document.lastModified).toDateString();
 
@@ -81,9 +81,10 @@ function getLastVisit() {
 	if(messageElement != null) {
 		messageElement.textContent = message;
 	}
-	let lastOpend =  document.querySelector('#time')
+	let lastOpend =  document.querySelector('#time');
+	if (lastOpend !== null) {
 	document.querySelector('#time').textContent = new Date().toDateString();
-
+	}
 	const gridbutton = document.querySelector("#grid");
 	const listbutton = document.querySelector("#list");
 	const display = document.querySelector("article");
@@ -123,8 +124,8 @@ async function getLinks() {
      address.textContent = ('Address: ${member.address}', member.address);
      phone.textContent = ('Phone #: ${member.phone}', member.phone);
 	 url.setAttribute('href', member.url);
-     image.setAttribute('src', member.imageurl);
-     image.setAttribute('alt', 'Protrait of ${member.name}');
+     image.setAttribute('src', member.imgurl);
+     image.setAttribute('alt', 'Protrait of ${member.name}', member.name);
      image.setAttribute('loading', 'lazy');
      image.setAttribute('width', '340');
      image.setAttribute('height', '440');
