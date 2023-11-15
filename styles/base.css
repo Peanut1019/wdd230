@@ -148,6 +148,9 @@ main h2 {
 .card a:hover {
     color: #623c1b;
 }
+#weather-icon {
+    height: 25px;
+}
 iframe {
     width: 350px;
     grid-column: 1/3;
