@@ -12,11 +12,107 @@ hamButton.addEventListener('click', () => {
 	navigation.classList.toggle('open');
 	hamButton.classList.toggle('open');
 });
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+//
+const exButton = document.querySelector('#ex');
+const advert = document.querySelector('#advert');
+const d = new Date();
+let day = d.getDay();
+
+if ((day == 0) || (day == 4) || (day == 5) || (day == 6)) {
+	if (advert !==null) {
+	advert.classList.toggle('close');
+	}
+	if (exButton !== null) {
+	exButton.classList.toggle('close');
+	}
+}
+if (exButton !== null) {
+exButton.addEventListener('click', () => {
+	advert.classList.toggle('close');
+	exButton.classList.toggle('close');
+});
+}
+// 
+const currentTemp = document.querySelector('#current-temp');
+const weatherIcon = document.querySelector('#weather-icon');
+const captionDesc = document.querySelector('#desc');
+const url = 'https://api.openweathermap.org/data/2.5/weather?lat=40.36&lon=-111.89&units=imperial&appid=5497b55e3924af4b31a9a1ea3f35f231';
+const fore = 'https://api.openweathermap.org/data/2.5/forecast?lat=40.36&lon=-111.89&units=imperial&cnt=6&appid=5497b55e3924af4b31a9a1ea3f35f231'
+async function apiFetch() {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            displayResults(data);
+			// console.log(data);
+        }
+        else {
+            throw Error(await response.text());
+        }
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+async function apiFetch2() {
+    try {
+        const response = await fetch(fore);
+        if (response.ok) {
+            const duty = await response.json();
+            displayForecast(duty);
+			// console.log(data);
+        }
+        else {
+            throw Error(await response.text());
+        }
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+function displayResults(data) {
+    currentTemp.innerHTML = `${data.main.temp}&deg;F`;
+    const iconsrc =`https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+    let desc = data.weather[0].description;
+    weatherIcon.setAttribute('src', iconsrc);
+    weatherIcon.setAttribute('alt', 'Weather Icon');
+    captionDesc.textContent= `${desc}`;
+}
+function displayForecast(duty) {
+	const sol = 0;
+	duty.list.forEach((value)=>{
+		let ficonsrc = `https://openweathermap.org/img/w/${value.weather[0].icon}.png`;
+        let desc = value.weather[0].description;
+        let figure = document.createElement('div');
+        let forecastIcon = document.createElement('img');
+		let foreTemp = document.createElement('p');
+		let forecastDay = document.createElement('h4');
+		const dia = sol +1;
+		forecastDay.textContent = `Day #${dia}`;
+		const temp = value.main.temp;
+		foreTemp.textContent = `${temp}F`
+        forecastIcon.setAttribute('id', "weather-icon");
+        forecastIcon.setAttribute('src', ficonsrc);
+        forecastIcon.setAttribute('alt', value.main);
+        let foreDesc = document.createElement('figcaption');
+        foreDesc.textContent = `${desc}`;
+        // figure.appendChild(forecastDay);
+		figure.appendChild(forecastIcon);
+		figure.appendChild(foreTemp);
+		figure.appendChild(foreDesc);
+        if (forecast !== null) {
+		forecast.appendChild(figure);
+		}
+	});
+	
+}   
+apiFetch();
+apiFetch2();
 const modeButton = document.querySelector("#mode");
 const main = document.querySelector("body");
 const spotlights = document.querySelector(".spotlights");
 const weather = document.querySelector(".weather");
+const forecast = document.querySelector(".forecast");
 const events = document.querySelector(".events");
 const hero = document.querySelector(".hero");
 
@@ -27,6 +123,8 @@ modeButton.addEventListener("click", () => {
 		spotlights.style.background = "#5e9cae";
 		weather.style.color = "#5e9cae";
 		weather.style.background = "#0f0326";
+		forecast.style.color = "#5e9cae";
+		forecast.style.background = "#0f0326";
 		events.style.color = "#5e9cae";
 		events.style.background = "#0f0326";
 		hero.style.color = "#5e9cae";
@@ -40,6 +138,8 @@ modeButton.addEventListener("click", () => {
 		spotlights.style.background = "#0f0326";
 		weather.style.color = "#0f0326";
 		weather.style.background = "#5e9cae";
+		forecast.style.color = "#0f0326";
+		forecast.style.background = "#5e9cae";
 		events.style.color = "#0f0326";
 		events.style.background = "#5e9cae";
 		hero.style.color = "#0f0326";
@@ -90,15 +190,16 @@ function getLastVisit() {
 	const display = document.querySelector("article");
 	
 	// The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
-	
+	if (gridbutton !== null) {
 	gridbutton.addEventListener("click", () => {
 		// example using arrow function
 		display.classList.add("grid");
 		display.classList.remove("list");
 	});
-	
+}
+if (listbutton !== null) {
 	listbutton.addEventListener("click", showList); // example using defined function
-	
+}
 	function showList() {
 		display.classList.add("list");
 		display.classList.remove("grid");
@@ -141,7 +242,9 @@ async function getLinks() {
      card.appendChild(phone);
 	 card.appendChild(url);
 	 card.appendChild(membership);
+	 if (disc !== null) {
      disc.appendChild(card);
+	 }
         });
     }
     displayLinks(data.members);

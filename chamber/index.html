@@ -19,6 +19,12 @@
     <title>Chamber of Commerce Site</title>
 </head>
 <body>
+    <banner id="advert">
+        <div id="ex">
+            ✖️
+        </div>
+        <h2>Come to the Chamber of Commerce Meet and Greet<br>Wednesday at 7:00 p.m.</h2>
+    </banner>
     <header>
         <div id="mode">
             ☾
@@ -26,7 +32,7 @@
         <h1>Saratoga Springs Chamber of Commerce</h1>
         <img class= "img" src="images/saralogo.webp" alt= "A Logo">
     </header>
-    
+
     <nav>
         <button id="menu"></button>
         <ul class="navigation">
@@ -36,6 +42,7 @@
         <li><a href="join.html">Join</a></li>
     </ul>
     </nav>
+    
     <main>
         <section class="hero">
             <picture>
@@ -57,7 +64,12 @@
         </section>
         <section class="weather">
             <h2>Weather:</h2>
-            <a class="weatherwidget-io" href="https://forecast7.com/en/40d33n111d90/saratoga-springs/" data-label_1="SARATOGA SPRINGS" data-label_2="WEATHER" data-theme="original" >SARATOGA SPRINGS WEATHER</a>
+            <img id="weather-icon" scr="" alt="">
+            <br>
+            <span id="current-temp"></span> - <span id="desc"></span>
+        </section>
+        <section class="forecast">
+            <h2>Forecast:</h2>
         </section>
         <section class="spotlights">
             <h2>Spotlights:</h2>
