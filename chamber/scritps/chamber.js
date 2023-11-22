@@ -208,6 +208,7 @@ if (listbutton !== null) {
 const baseURL = "https://Peanut1019.github.io/wdd230/";
 const linksURL = "https://Peanut1019.github.io/wdd230/chamber/data/members.json";
 const disc = document.querySelector('#disc');
+const mess = document.querySelector('#mess');
 async function getLinks() {
     const response = await fetch(linksURL);
     const data = await response.json();
@@ -250,3 +251,54 @@ async function getLinks() {
     displayLinks(data.members);
 }
 getLinks();
+async function getLnks() {
+    const response = await fetch(linksURL);
+    const data = await response.json();
+    const dispLinks = (members) => {
+    members.forEach(member => {
+    	let card = document.createElement('div');
+		let image = document.createElement('img');
+		let name = document.createElement('h3');
+    	let address = document.createElement('h4');
+    	let phone = document.createElement('h4');
+		let url = document.createElement('a');
+		let membership = document.createElement('h4');
+		function getMultipleRandom(members, num) {
+			const shuffled = [...members].sort(() => 0.5 - Math.random());
+		  
+			return shuffled.slice(0, num);
+		  }
+	const meme = (member.membership);
+     if ((meme == "Silver") || (meme == "Gold")) {
+	if (members = getMultipleRandom(members, 1)) {
+     name.textContent = (`Name: ${member.name}`);
+     address.textContent = (`Address: ${member.address}`);
+     phone.textContent = (`Phone #: ${member.phone}`);
+     image.setAttribute('src', member.imgurl);
+     image.setAttribute('alt', 'Protrait of ${member.name}', member.name);
+     image.setAttribute('loading', 'lazy');
+     image.setAttribute('width', '340');
+     image.setAttribute('height', '440');
+	 let linkAnchor = document.createElement('a');
+		linkAnchor.setAttribute('href',member.url);
+		linkAnchor.setAttribute('target','_blank');
+		linkAnchor.textContent = (`${member.name}'s website`);
+		url.appendChild(linkAnchor);
+	 membership.textContent = (`Membership: ${member.membership}`);
+
+	 card.appendChild(image);
+     card.appendChild(name);
+     card.appendChild(address);
+     card.appendChild(phone);
+	 card.appendChild(url);
+	 card.appendChild(membership);
+	 if (mess !== null) {
+	mess.appendChild(card);
+	 }
+	}
+	}
+        });
+    }
+    dispLinks(data.members);
+}
+getLnks();

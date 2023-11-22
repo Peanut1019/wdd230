@@ -16,7 +16,7 @@
     } */
     main {
         justify-items: center;
-        width: fit-content;
+        width: 100%;
     }
     nav {
         margin: 0 auto;
@@ -41,20 +41,11 @@
     }
     .spotlights {
         grid-column: 1/3;
-        width: 750px;
+        width: 100%;
     }
     .forecast {
         grid-column: 1/3;
-        width: 750px; 
-    }
-    .fun {
-        grid-column: 1/2;
-    }
-    .food {
-        grid-column: 2/3;
-    }
-    .favs {
-        grid-column: 3/4;
+        width: 100%; 
     }
     .sidebar {
         grid-column: 2/3;
