@@ -35,8 +35,12 @@ async function apiFetch() {
     }
 }
 function displayResults(data) {
+    if (currentTemp !== null) {
     currentTemp.innerHTML = `Temp: ${data.main.temp}&deg;F`;
+    }
+    if (currentHum !== null) {
     currentHum.innerHTML = `Humidity: ${data.main.humidity}%`;
+    }
     const iconsrc =`https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
     let desc = data.weather[0].description;
     weatherIcon.setAttribute('src', iconsrc);
@@ -102,11 +106,12 @@ async function getLinks() {
 		let walkFull = document.createElement('td');
      
      heading.textContent = (`${price.vechile}`);
-     max.textContent = (`${price.pricing.max}`);
+     max.textContent = (`${price.max}`);
 	 resHalf.textContent = (`${price.pricing.reserve.half}`);
      resFull.textContent = (`${price.pricing.reserve.full}`);
      walkHalf.textContent = (`${price.pricing.walk.half}`);
      walkFull.textContent = (`${price.pricing.walk.full}`);
+
 	 row.appendChild(heading);
      row.appendChild(max);
      row.appendChild(resHalf);

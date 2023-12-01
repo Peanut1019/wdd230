@@ -2,9 +2,9 @@
     "prices": [
         {
         "vechile": "Honda Metro Scooter",
+        "max": "1",
         "pricing": [
             {
-                "max": "1",
                 "reserve": [
                     {
                         "half": "$20",
