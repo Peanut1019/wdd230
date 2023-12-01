@@ -107,10 +107,10 @@ async function getLinks() {
      
      heading.textContent = (`${price.vechile}`);
      max.textContent = (`${price.max}`);
-	 resHalf.textContent = (`${price.pricing.reserve.half}`);
-     resFull.textContent = (`${price.pricing.reserve.full}`);
-     walkHalf.textContent = (`${price.pricing.walk.half}`);
-     walkFull.textContent = (`${price.pricing.walk.full}`);
+	 resHalf.textContent = (`${price.reserveHalf}`);
+     resFull.textContent = (`${price.reserveFull}`);
+     walkHalf.textContent = (`${price.walkHalf}`);
+     walkFull.textContent = (`${price.walkFull}`);
 
 	 row.appendChild(heading);
      row.appendChild(max);
