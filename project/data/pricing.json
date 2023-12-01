@@ -1,0 +1,113 @@
+{
+    "prices": [
+        {
+        "vechile": "Honda Metro Scooter",
+        "pricing": [
+            {
+                "max": "1",
+                "reserve": [
+                    {
+                        "half": "$20",
+                        "full": "$30"
+                    }
+                ],
+                "walk": [
+                    {
+                        "half": "$25",
+                        "full": "$35"
+                    }
+                ]
+            }
+        ]},
+        {"vechile": "Honda Dio Scooter",
+        "pricing": [
+            {
+                "max": "2",
+                "reserve": [
+                    {
+                        "half": "$30",
+                        "full": "$40"
+                    }
+                ],
+                "walk": [
+                    {
+                        "half": "$35",
+                        "full": "$45"
+                    }
+                ]
+            }
+        ]},
+        {"vechile": "Honda PCX150 Scooter",
+        "pricing": [
+            {
+                "max": "2",
+                "reserve": [
+                    {
+                        "half": "$40",
+                        "full": "$50"
+                    }
+                ],
+                "walk": [
+                    {
+                        "half": "$45",
+                        "full": "$55"
+                    }
+                ]
+            }
+        ]},
+        {"vechile": "Honda Pioneer ATV",
+        "pricing": [
+            {
+                "max": "4",
+                "reserve": [
+                    {
+                        "half": "$50",
+                        "full": "$70"
+                    }
+                ],
+                "walk": [
+                    {
+                        "half": "$60",
+                        "full": "$80"
+                    }
+                ]
+            }
+        ]},
+        {"vechile": "Jeep Wrangler - 4 door with a/c",
+        "pricing": [
+            {
+                "max": "5",
+                "reserve": [
+                    {
+                        "half": "$70",
+                        "full": "$100"
+                    }
+                ],
+                "walk": [
+                    {
+                        "half": "$85",
+                        "full": "$125"
+                    }
+                ]
+            }
+        ]},
+        {"vechile": "Jeep Wrangler - 2 door",
+        "pricing": [
+            {
+                "max": "4",
+                "reserve": [
+                    {
+                        "half": "$60",
+                        "full": "$85"
+                    }
+                ],
+                "walk": [
+                    {
+                        "half": "$70",
+                        "full": "$90"
+                    }
+                ]
+            }
+        ]}
+    ]
+}

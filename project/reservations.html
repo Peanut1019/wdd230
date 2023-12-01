@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="Jess Nelson">
+<meta
+  name="description"
+  content="A web page wherein the wealth of Jessica Nelson's knoweldge of WDD 230 - Web Frontend Development is exemplified. Content is assinged through the course assignment portal.">
+  <meta property="og:title" content="Jess Nelson - WDD 230 - Project">
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.utahfarmbureau.org/Article/Live/TitleImage/1627/120821-162135">
+<meta property="og:url" content="https://peanut1019.github.io/wdd230/project/index.htm">
+<link rel="stylesheet" href="styles/normalize.css">
+<link href="styles/style.css" rel="stylesheet">
+<link href="styles/larger.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+        <title>WDD 230 Project</title>
+    </head>
+    <body>
+        <header>
+            <img class= "img" src="images/scoots-logo.png" alt= "Scoots Logo">
+            <h1>Scoots Fun Vehicle Rental</h1>
+        </header>
+        
+        <nav>
+            <button id="menu"></button>
+            <ul class="navigation">
+            <li ><a href="index.html">Home</a></li>
+            <li><a href="#">Rentals</a></li>
+            <li><a href="#" class="active">Reservations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </nav>
+        <main>
+            <section class="terms">
+                <h2>Rental Services and Agreement:</h2>
+                <ul>
+                <li>A $50 security deposit is required to confirm reservations.</li>
+                <li>A valid drivers license is required in hand at the time of rental.</li>
+                <li>No one under the age of 12 years of age are allowed to ride on the scooters.</li>
+                <li>Fuel charge is not included.</li>
+                <li>Unlimited mileage.</li>
+                <li>Liability insurance is included.</li>
+                <li>Damage insurance is available for purchase.</li>
+                <li>Free delivery to Cozumel hotels or Airbnbs for 2+ day rentals.</li>
+                <li>Payment via Google Pay, Apple Pay, cash, credit card, debit card, or venmo.</li>
+                <li>Rentals may be returned to either physical location.</li>
+            </ul>
+            </section>
+            <section class="rental">
+                <h2>Reservation Form:</h2>
+            <form method="get" action="thanks.html">
+                <label id="time"><input type="hidden" name="time" required></label>
+                <fieldset class="random">
+                    <legend>Reservation Information:</legend>
+                    <label id="date">Date*<input type="date" name="date" required></label>
+                    <label id="period">Period*<input type="text" name="period" required></label>
+                    <label id="number">Number*<input type="text" name="number" required></label>
+                    <div>Vechile*</div>
+                    <label class="vechile"><input type="radio" name="vechile" value="scooter"> Scooter</label>
+                    <label class="vechile"><input type="radio" name="vechile" value="atv"> ATV</label>
+                    <label class="vechile"><input type="radio" name="vechile" value="jeep"> Jeep</label>
+                </fieldset>
+                <fieldset class="personal">
+                <legend>Personal Information:</legend>
+                <label id="fname">First Name*<input type="text" name="fname" required></label>
+                <label id="lname">Last Name*<input type="text" name="lname" required></label>
+                <label id="email">Email*<input type="email" name="email" placeholder="email@cool.com" required></label>
+                <label id="orgin">Home State [if USA] or Country*<input type="text" name="orgin" placeholder="Ex. CA, USA" required></label>
+                <label id="drop">Drop-off Location [opt]<input type="text" name="drop"></label>
+                <label id="comment">Comment [opt]<input type="text" name="comment"></label>
+              </fieldset> 
+              <input type="submit" value="Send Message" class="submitBtn">
+            </form>
+        </section>
+        </main>
+        <footer>
+            <p>&copy; <span id="year"></span> - Jessica Nelson - USA</p>
+        <h3>Contact Us:</h3>
+        <p>📞: 52-987-___-____</p>
+        <p>📧: random123@email.com</p>
+        <p>🏢: Av. Rafael E. Melgar 628, Centro, 77600 Cozumel, Q.R., Mexico</p>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+        </footer>
+        </footer>
+        <script src="scripts/prog.js"></script>
+</body>
+</html>
