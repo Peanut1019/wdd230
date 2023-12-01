@@ -5,108 +5,66 @@
         "max": "1",
         "pricing": [
             {
-                "reserve": [
-                    {
-                        "half": "$20",
-                        "full": "$30"
-                    }
-                ],
-                "walk": [
-                    {
-                        "half": "$25",
-                        "full": "$35"
-                    }
-                ]
+                "reserveHalf": "$20",
+                "reserveFull": "$30",
+                "walkHalf": "$25",
+                "walkfull": "$35"
             }
         ]},
         {"vechile": "Honda Dio Scooter",
+        "max": "2",
         "pricing": [
             {
-                "max": "2",
-                "reserve": [
-                    {
-                        "half": "$30",
-                        "full": "$40"
-                    }
-                ],
-                "walk": [
-                    {
-                        "half": "$35",
-                        "full": "$45"
-                    }
-                ]
+                
+                "reserveHalf": "$30",
+                "reserveFull": "$40",
+                "walkHalf": "$35",
+                "walkfull": "$45"
             }
         ]},
         {"vechile": "Honda PCX150 Scooter",
+        "max": "2",
         "pricing": [
             {
-                "max": "2",
-                "reserve": [
-                    {
-                        "half": "$40",
-                        "full": "$50"
-                    }
-                ],
-                "walk": [
-                    {
-                        "half": "$45",
-                        "full": "$55"
-                    }
-                ]
+                
+                "reserveHalf": "$40",
+                "reserveFull": "$50",
+                "walkHalf": "$45",
+                "walkfull": "$55"
+                 
             }
         ]},
         {"vechile": "Honda Pioneer ATV",
+        "max": "4",
         "pricing": [
             {
-                "max": "4",
-                "reserve": [
-                    {
-                        "half": "$50",
-                        "full": "$70"
-                    }
-                ],
-                "walk": [
-                    {
-                        "half": "$60",
-                        "full": "$80"
-                    }
-                ]
+                
+                "reserveHalf": "$50",
+                "reserveFull": "$70",
+                "walkHalf": "$60",
+                "walkfull": "$80"
             }
         ]},
         {"vechile": "Jeep Wrangler - 4 door with a/c",
+        "max": "4",
         "pricing": [
             {
                 "max": "5",
-                "reserve": [
-                    {
-                        "half": "$70",
-                        "full": "$100"
-                    }
-                ],
-                "walk": [
-                    {
-                        "half": "$85",
-                        "full": "$125"
-                    }
-                ]
+                "reserveHalf": "$70",
+                "reserveFull": "$100",
+                "walkHalf": "$85",
+                "walkfull": "$125"
             }
         ]},
         {"vechile": "Jeep Wrangler - 2 door",
+        "max": "4",
         "pricing": [
             {
                 "max": "4",
-                "reserve": [
-                    {
-                        "half": "$60",
-                        "full": "$85"
-                    }
-                ],
-                "walk": [
-                    {
-                        "half": "$70",
-                        "full": "$90"
-                    }
-                ]
+                "reserveHalf": "$60",
+                "reserveFull": "$85",
+                "walkHalf": "$70",
+                "walkfull": "$90"
             }
         ]}
     ]
