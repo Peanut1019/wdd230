@@ -33,7 +33,7 @@ header {
     grid-template-columns:120px 1fr;
     width: 100%;
     justify-items: center;
-    background-color: var(--accent);
+    background-color: var(--accent2);
     color: var(--primary);
     font-size: 15px;
     font-family: "Courgette";
@@ -51,7 +51,7 @@ header img {
 }
 nav {
     text-align: center;
-    background-color: var(--accent2);
+    background-color: var(--accent);
     margin: 0 auto;
 	width: 100%;
 }
@@ -67,7 +67,7 @@ nav a{
 }
 nav a:hover{
 text-decoration: underline;
-color: var(--accent);
+color: var(--accent2);
 }
 .navigation li {
 	display: none;
@@ -115,14 +115,29 @@ section {
 }
 #call {
 grid-column: 1/3;
+width: 100%;
+height: auto;
+text-align: center;
+background-color: var(--accent2);
 }
 #call img {
     width: 100%;
     height:auto;
     }
+#call a {
+    text-decoration: none;
+    background-color: var(--accent2);
+    color: var(--other);
+    font-size: large;
+}
+#call a:hover {
+    background-color: var(--other);
+    color: var(--accent2); 
+}
 #types {
     grid-column: 1/3;
     text-align: center;
+    width: 100%;
 }
 #types li {
     list-style-type: none;
@@ -130,6 +145,13 @@ grid-column: 1/3;
 }
 #weather {
     grid-column: 1/3;
+    width: 100%;
+    text-align: center;
+}
+#forecast {
+    grid-column: 1/3;
+    width: 100%;
+    text-align: center;
 }
 #contacts {
     font-size: x-large;
@@ -145,7 +167,8 @@ table {
 	box-shadow: 0 0 10px var(--shadow);
 	border-collapse: collapse;
     grid-column: 1/3;
-    max-width: 500px;
+    max-width: 100%;
+    height: auto;
 }
 form {
     grid-column: 1/3;

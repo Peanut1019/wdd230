@@ -17,7 +17,7 @@ const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('#desc');
 const forecast = document.querySelector("#forecast");
 const url = 'https://api.openweathermap.org/data/2.5/weather?lat=20.43&lon=-86.92&units=imperial&appid=5497b55e3924af4b31a9a1ea3f35f231';
-const fore = 'https://api.openweathermap.org/data/2.5/forecast?lat=20.436&lon=-86.92&units=imperial&cnt=3&appid=5497b55e3924af4b31a9a1ea3f35f231';
+const fore = 'https://api.openweathermap.org/data/2.5/forecast?lat=20.43&lon=-86.92&units=imperial&cnt=3&appid=5497b55e3924af4b31a9a1ea3f35f231';
 async function apiFetch() {
     try {
         const response = await fetch(url);
@@ -52,8 +52,8 @@ async function apiFetch2() {
         const response = await fetch(fore);
         if (response.ok) {
             const duty = await response.json();
-            // displayForecast(duty);
-			console.log(duty);
+            displayForecast(duty);
+			// console.log(duty);
         }
         else {
             throw Error(await response.text());
@@ -70,8 +70,6 @@ function displayForecast(duty) {
         let figure = document.createElement('div');
         let forecastIcon = document.createElement('img');
 		let foreTemp = document.createElement('p');
-		let forecastDay = document.createElement('h4');
-		forecastDay.textContent = `Day #${dia}`;
 		const temp = value.main.temp;
 		foreTemp.textContent = `${temp}F`
         forecastIcon.setAttribute('id', "weather-icon");
@@ -89,6 +87,7 @@ function displayForecast(duty) {
 	
 }   
 apiFetch();
+apiFetch2();
 const baseURL = "https://Peanut1019.github.io/wdd230/";
 const linksURL = "https://Peanut1019.github.io/wdd230/project/data/pricing.json";
 const dollars = document.querySelector('#dollars');
@@ -110,7 +109,7 @@ async function getLinks() {
 	 resHalf.textContent = (`${price.reserveHalf}`);
      resFull.textContent = (`${price.reserveFull}`);
      walkHalf.textContent = (`${price.walkHalf}`);
-     walkFull.textContent = (`${price.walkFull}`);
+     walkFull.textContent = (`${price.walkfull}`);
 
 	 row.appendChild(heading);
      row.appendChild(max);
