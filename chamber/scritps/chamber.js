@@ -60,7 +60,7 @@ async function apiFetch2() {
         if (response.ok) {
             const duty = await response.json();
             displayForecast(duty);
-			// console.log(data);
+			// console.log(duty);
         }
         else {
             throw Error(await response.text());
